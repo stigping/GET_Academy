@@ -13,18 +13,18 @@
             height: 100vh;
             display: grid;
             grid-template-columns: 200px 1fr;
-            grid-template-rows: 50px 10fr 20px;
+            grid-template-rows: 65px 10fr 20px;
             grid-template-areas: 'header header' 'menu mainContent' 'footer footer';
         }
         div.header {
             background-color: lightgray;
             grid-area: header;
         }
-        .logo {
-            margin-left: 5px;
+        div.header img {
+            margin-left: 25px;
             padding: 0px;
-            height: 5px;
-            width: 5px;
+            width: 65;
+            height: auto;
             /*grid-area: logo;*/
         }
         div.menu {
@@ -54,17 +54,15 @@
 
 <div class="header">
 
-    <div class="logo">
-        <a href="#" class="logo">
+        <a href="#" class="img">
             <img src="http://flamewatergaming.com/images/WebLogo.png" alt="">
         </a>
-    </div>
+            
     
-    Header
 </div>
 
 <div class="menu">
-    Menu
+    
 </div>
 
 <div class="mainContent">
@@ -117,7 +115,7 @@
 </div>
 
 <div class="footer">
-    Footer
+    
 </div>
 
 </div>
