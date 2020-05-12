@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>STIG - GET</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 50px 10fr 20px;
+            grid-template-areas: 'header header' 'menu mainContent' 'footer footer';
+        }
+        div.header {
+            background-color: lightgray;
+            grid-area: header;
+        }
+        div.menu {
+            grid-area: menu;
+        }
+        div.mainContent {
+            grid-area: mainContent;
+        }
+        div.footer {
+            background-color: lightgray;
+            grid-area: footer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px 1fr 4fr 20px;
+                grid-template-areas: 'header' 'menu' 'mainContent' 'footer';
+            }
+        }
+    </style>
+</head>
+
+<body">
+
+<div class="page">
+
+<div class="header">
+    Header
+</div>
+
+<div class="menu">
+    Menu
+</div>
+
+<div class="mainContent">
+
+    <h1 style="text-align: center;">The Start</h1>
+<p>
+    This is the beginning of my <strong>customized</strong> <mark>HTML</mark> document
+</p>
+
+<hr>
+
+<h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">It Continues</h2>
+<p style="font-size: 150%;">
+    There is a long journey up ahead
+</p>
+
+<hr>
+
+<h3 title=":wave:" style="font-size: 40px; text-align: center;">Just Another Header, but this has a tooltip</h3>
+<p style="font-size: 15px;">
+    And a paragraph, but below is a link... Looks kinda <sup>inter</sup><sub>esting</sub> ngl
+</p>
+<a style="position: relative; left: 50px; top: 5px;" href="http://flamewatergaming.com/">This is the link, it takes you somewhere on the world wide web. Yes it is SFW..</a>
+
+<p>
+    Ooh, a nice picture :D
+</p>
+
+<img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e1/e1e12cf41a8d1f99daa997800aa62b8d9ecd4dda_full.jpg" alt="LeStigPing on Steam :*" width="200" height="200">
+
+<p style="color:red">
+    A BUTTON!?<br/>
+    SHINY!!<br/>
+</p>
+<button>Shiny Button</button>
+
+<ul style="background-color: white;">
+    <li>Something</li>
+    <li>Something else</li>
+    <li>Another one</li>
+</ul>
+
+<ol style="background-color: teal;">
+    <li>Hello</li>
+    <li>Goodbye</li>
+    <li>Cool dude</li>
+</ol>
+
+<hr>
+
+<pre>
+    Do you use br in your paragraphs?
+
+    That's a shame.
+
+    Not really, I do too.
+
+    Who uses pre?
+</pre>
+
+<hr>
+
+</div>
+
+<div class="footer">
+    Footer
+</div>
+
+</div>
+
+</body>
+</html>
