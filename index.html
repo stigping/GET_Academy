@@ -137,14 +137,18 @@
       Quiz time! *airhorns*
   </p>
 
-  <h3 id="answer1">Answer 1</h3>
-  <h2 onclick="doAnswer1()">Potato</h2>
+  <p style="text-align: center;">
+    <strong>No you don't get a detailed question. No it doesn't make sense..</strong>
+</p>
 
-  <h3 id="answer2">Answer 2</h3>
-  <h2 onclick="doAnswer2()">Chicken</h2>
+  <h3 style="text-align: center;" id="answer1"></h3>
+  <h2 style="text-align: center;" onclick="doAnswer1()">Potato</h2>
 
-  <h3 id="answer3">Answer 3</h3>
-  <h2 onclick="doAnswer3()">Cake</h2>
+  <h3 style="text-align: center;" id="answer2"></h3>
+  <h2 style="text-align: center;" onclick="doAnswer2()">Chicken</h2>
+
+  <h3 style="text-align: center;" id="answer3"></h3>
+  <h2 style="text-align: center;" onclick="doAnswer3()">Cake</h2>
 
   <hr>
 </div>
@@ -160,18 +164,18 @@
 <script>
     function doAnswer1() {
         document.getElementById('answer1').innerHTML = 'Answer 1 is wrong!';
-        document.getElementById('answer2').innerHTML = 'Answer 2';
-        document.getElementById('answer3').innerHTML = 'Answer 3';
+        document.getElementById('answer2').innerHTML = '';
+        document.getElementById('answer3').innerHTML = '';
     }
     function doAnswer2() {
         document.getElementById('answer2').innerHTML = 'Answer 2 is correct!';
-        document.getElementById('answer1').innerHTML = 'Answer 1';
-        document.getElementById('answer3').innerHTML = 'Answer 3';
+        document.getElementById('answer1').innerHTML = '';
+        document.getElementById('answer3').innerHTML = '';
     }
     function doAnswer3() {
         document.getElementById('answer3').innerHTML = 'Answer 3 is wrong!';
-        document.getElementById('answer1').innerHTML = 'Answer 1';
-        document.getElementById('answer2').innerHTML = 'Answer 2';
+        document.getElementById('answer1').innerHTML = '';
+        document.getElementById('answer2').innerHTML = '';
     }
 </script>
 
