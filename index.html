@@ -15,7 +15,7 @@
 <div class="header">
 
         <a href="#" class="img">
-            <img src="http://flamewatergaming.com/images/WebLogo.png" alt="">
+            <img id="headerLogo" src="http://flamewatergaming.com/images/WebLogo.png" alt="">
         </a>
             
     
@@ -31,9 +31,9 @@
     </ul>
 
     <ul>
-        <li> <a ondblclick="doSomething1()">ondblclick</a></li>
-        <li> <a oncontextmenu="doSomething2">oncontextmenu</a></li>
-        <li> <a onkeydown="doSomething3">onkeydown</a></li>
+        <li> <a id="ondblclick" ondblclick="doSomething1()">Double click this</a></li>
+        <li> <a id="oncontextmenu" oncontextmenu="doSomething2()" contextmenu="contextmenu">Right click this</a></li>
+        <a> <input id="onkeydown" style="margin-left: -27.5px;" onkeydown="doSomething3()" onkeyup="doSomething4()"></input></a>
     </ul>
 </div>
 
