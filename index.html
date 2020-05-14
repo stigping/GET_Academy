@@ -8,7 +8,7 @@
     <script src="js/javascript.js"></script>
 </head>
 
-<body">
+<body onload="websiteLoaded()">
 
 <div class="page">
 
@@ -43,27 +43,6 @@
 <p style="text-align: center;">
     This is the beginning of my <strong>customized</strong> <mark>HTML</mark> document
 </p>
-
-<hr>
-
-<h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">It Continues</h2>
-<p style="text-align: center; font-size: 150%;">
-    There is a long journey up ahead
-</p>
-
-<hr>
-
-<h3 title=":wave:" style="font-size: 40px; text-align: center;">Just Another Header, but this has a tooltip</h3>
-<p style="text-align: center; font-size: 15px;">
-    And a paragraph, but below is a link... Looks kinda <sup>inter</sup><sub>esting</sub> ngl
-</p>
-<a style="position: relative; left: 50px; top: 5px;" href="http://flamewatergaming.com/">This is the link, it takes you somewhere on the world wide web. Yes it is SFW..</a>
-
-<p>
-    Ooh, a nice picture :D
-</p>
-
-<img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e1/e1e12cf41a8d1f99daa997800aa62b8d9ecd4dda_full.jpg" alt="LeStigPing on Steam :*" width="200" height="200">
 
 <hr>
 
@@ -167,8 +146,30 @@
 
 <hr>
 
+<div>
+    If the page loads correctly, there should be a confirmation text below.
+    <p id="loadText">
+        The website has not loaded correctly. Refresh to try again...
+    </p>
+</div>
 
+<hr>
 
+<div>
+    <p id="dnt" onload="showDnt()">
+        
+    </p>
+</div>
+<p id="changeThis">
+    Do you want to build a snowman again?
+</p>
+<button onclick="changeText()">
+    Click me if you dare
+</button>
+<p>
+    The button above will show you the current date and time, and answer the question.
+</p>
+<br/>
 <hr>
 
 </div>

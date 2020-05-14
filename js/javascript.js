@@ -49,3 +49,13 @@ console.log(onClick.innerText)
         ' ' + onClick.innerText;
         
 }
+
+function websiteLoaded() {
+    document.getElementById('loadText').innerText = 'success';
+    console.log('The website has loaded!');
+}
+
+function changeText() {
+    document.getElementById('changeThis').innerHTML = 'No.';
+    document.getElementById('dnt').innerHTML = 'Current time:' + new Date().toTimeString();
+}
