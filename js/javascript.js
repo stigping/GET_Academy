@@ -25,3 +25,7 @@ function doSomething3() {
 function doSomething4() {
     console.log('onkeyup was triggered!');
 }
+function doChange(tableo) {
+        tableo.innerHTML = 'x';
+//        console.log('true');
+}
