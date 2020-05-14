@@ -38,14 +38,14 @@ var cln02 = 1;
 var clt02 = 'clt02 ';
 
 
-function clninput() {
-
+function clinput(onClick) {
+console.log(onClick.innerText)
     cln01++;
     cln02++;
     clt01 += '1';
     clt02 += '2';
 
-    document.getElementById('clinput').innerHTML =
-        'Input access code: ' + cln01 + cln02;
+    document.getElementById('clninput').innerHTML +=
+        ' ' + onClick.innerText;
         
 }
