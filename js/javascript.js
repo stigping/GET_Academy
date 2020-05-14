@@ -13,6 +13,7 @@ function doAnswer3() {
     document.getElementById('answer1').innerHTML = '';
     document.getElementById('answer2').innerHTML = '';
 }
+
 function doSomething1() {
     console.log('ondblclick was triggered!');
 }
@@ -25,7 +26,26 @@ function doSomething3() {
 function doSomething4() {
     console.log('onkeyup was triggered!');
 }
+
 function doChange(tableo) {
         tableo.innerHTML = 'x';
 //        console.log('true');
+}
+
+var cln01 = 0;
+var clt01 = 'clt01 ';
+var cln02 = 1;
+var clt02 = 'clt02 ';
+
+
+function clninput() {
+
+    cln01++;
+    cln02++;
+    clt01 += '1';
+    clt02 += '2';
+
+    document.getElementById('clinput').innerHTML =
+        'Input access code: ' + cln01 + cln02;
+        
 }
