@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>STIG - GET</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/javascript.js"></script>
+</head>
+
+<body onload="websiteLoaded()">
+
+<div class="page">
+
+<div class="header">
+
+        <a href="#" class="img">
+            <img id="headerLogo" src="http://flamewatergaming.com/images/WebLogo.png" alt="">
+        </a>
+            
+    
+</div>
+
+<div class="menu">
+    <ul>
+        <li> <a href="#">Home</a></li>
+        <li> <a href="#">Item 2</a></li>
+        <li> <a href="#">Item 3</a></li>
+        <li> <a href="#">Item 4</a></li>
+        <li> <a href="#">Item 5</a></li>
+    </ul>
+
+    <ul>
+        <li> <a id="ondblclick" ondblclick="doSomething1()">Double click this</a></li>
+        <li> <a id="oncontextmenu" oncontextmenu="doSomething2()" contextmenu="contextmenu">Right click this</a></li>
+        <a> <input id="onkeydown" style="margin-left: -27.5px;" onkeydown="doSomething3()" onkeyup="doSomething4()"></input></a>
+    </ul>
+</div>
+
+<div class="mainContent">
+
+    <h1 style="text-align: center;">The Codelock</h1>
+<p style="text-align: center;">
+    This is the page showcasing the <strong>codelock</strong>
+</p>
+
+<hr>
+
+<div class="codelock">
+    <p id="clninput">
+        Input access code:
+    </p>
+    <button onclick="clinput(this)">
+            1
+    </button>
+    <button onclick="clinput(this)">
+            2
+    </button>
+    <button onclick="clinput(this)">
+            3
+    </button>
+    <br/>
+    <button onclick="clinput(this)">
+            4
+    </button>
+    <button onclick="clinput(this)">
+            5
+    </button>
+    <button onclick="clinput(this)">
+            6
+    </button>
+    <br/>
+    <button onclick="clinput(this)">
+            7
+    </button>
+    <button onclick="clinput(this)">
+            8
+    </button>
+    <button onclick="clinput(this)">
+            9
+    </button>
+</div>
+
+<div>
+    <p id="clcinput">
+        
+    </p>
+</div>
+
+</div>
+
+<div class="footer">
+    <a href="#" class="footer-text">
+        © Stig Omdal 2020.
+    </a>
+</div>
+
+</div>
+
+</body>
+</html>
