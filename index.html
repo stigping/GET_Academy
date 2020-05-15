@@ -15,23 +15,23 @@
 <div class="header">
 
 <nav class="main-nav">
-    <div class="full-wrapper">
+    <div class="full">
         <!-- Logo ( * your text or image into link tag *) -->
-        <div class="nav-logo-wrap">
+        <div class="nav-logo">
             <a href="#" class="logo">
                 <img src="img/WebLogo.png" alt="">
             </a>
         </div>
         <!-- Main Menu -->
-        <div class="inner-nav desktop-nav">
+        <div class="inner-nav">
             <ul style="max-height: 884px;">
-                <li class="active"><a href="#" style="height: 75px; line-height: 75px;">Home</a></li>
-				<li><a href="#" style="height: 75px; line-height: 75px;">1</a></li>
-				<li><a href="#" style="height: 75px; line-height: 75px;">2</a></li>
-				<li><a href="#" style="height: 75px; line-height: 75px;">3</a></li>
-				<li><a href="#" style="height: 75px; line-height: 75px;">4</a></li>
-				<li><a href="#" style="height: 75px; line-height: 75px;">5</a></li>
-				<li><a href="#" style="height: 75px; line-height: 75px;">6</a></li>
+                <li class="active"><a href="#" style="height: 75px; line-height: 75px;">Index</a></li>
+				<li><a href="pages/codelock.html" style="height: 75px; line-height: 75px;">Codelock</a></li>
+				<li><a href="pages/snowman.html" style="height: 75px; line-height: 75px;">Snowman</a></li>
+				<li><a href="pages/quiz.html" style="height: 75px; line-height: 75px;">Quiz</a></li>
+				<li><a href="pages/onmouseover.html" style="height: 75px; line-height: 75px;">onmouseover</a></li>
+				<li><a href="pages/onload.html" style="height: 75px; line-height: 75px;">onload</a></li>
+				<li><a href="pages/time.html" style="height: 75px; line-height: 75px;">time</a></li>
             </ul>
         </div>
     </div>
@@ -58,120 +58,6 @@
     Who uses pre?
 </pre>
 
-<hr>
-
-<svg width="30%" viewbox="0 0 250 250" style="background-color: gray;">
-    <circle cx="125" cy="75" r="30" fill="white" />
-    <circle cx="125" cy="130" r="40" fill="white" />
-    <circle cx="125" cy="200" r="50" fill="white" />
-
-    <circle cx="115" cy="62" r="5" fill="black" />
-    <circle cx="135" cy="62" r="5" fill="black" />
-
-    <rect x="100" y="40" width="50" height="10" fill="black" />
-    <rect x="110" y="10" width="30" height="35" fill="black" />
-
-    <polygon points="123,70 145,75 123,80" fill="orange" />
-
-</svg>
-
-  <hr>
-
-  <p style="text-align: center;">
-      Quiz time! *airhorns*
-  </p>
-
-  <p style="text-align: center;">
-    <strong>No you don't get a detailed question. No it doesn't make sense..</strong>
-</p>
-
-  <h3 style="text-align: center;" id="answer1"></h3>
-  <h2 style="text-align: center;" onclick="doAnswer1()">Potato</h2>
-
-  <h3 style="text-align: center;" id="answer2"></h3>
-  <h2 style="text-align: center;" onclick="doAnswer2()">Chicken</h2>
-
-  <h3 style="text-align: center;" id="answer3"></h3>
-  <h2 style="text-align: center;" onclick="doAnswer3()">Cake</h2>
-
-  <hr>
-
-<table>
-    <tr><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td></tr>
-    <tr><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td></tr>
-    <tr><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td></tr>
-    <tr><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td><td onmouseover="doChange(this)">o</td></tr>
-</table>
-
-  <hr>
-
-<div class="codelock">
-    <p id="clninput">
-        Input access code:
-    </p>
-    <button onclick="clinput(this)">
-            1
-    </button>
-    <button onclick="clinput(this)">
-            2
-    </button>
-    <button onclick="clinput(this)">
-            3
-    </button>
-    <br/>
-    <button onclick="clinput(this)">
-            4
-    </button>
-    <button onclick="clinput(this)">
-            5
-    </button>
-    <button onclick="clinput(this)">
-            6
-    </button>
-    <br/>
-    <button onclick="clinput(this)">
-            7
-    </button>
-    <button onclick="clinput(this)">
-            8
-    </button>
-    <button onclick="clinput(this)">
-            9
-    </button>
-</div>
-
-<div>
-    <p id="clcinput">
-        
-    </p>
-</div>
-
-<hr>
-
-<div>
-    If the page loads correctly, there should be a confirmation text below.
-    <p id="loadText">
-        The website has not loaded correctly. Refresh to try again...
-    </p>
-</div>
-
-<hr>
-
-<div>
-    <p id="dnt" onload="showDnt()">
-        
-    </p>
-</div>
-<p id="changeThis">
-    Do you want to build a snowman again?
-</p>
-<button onclick="changeText()">
-    Click me if you dare
-</button>
-<p>
-    The button above will show you the current date and time, and answer the question.
-</p>
-<br/>
 <hr>
 
 <div>
