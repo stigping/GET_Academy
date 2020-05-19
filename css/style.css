@@ -93,3 +93,7 @@ div.codelock button {
     margin-left: 10px;
     margin-top: 10px;
 }
+div.clickergame {
+    font-size: 500%;
+    user-select: none;
+}

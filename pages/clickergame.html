@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>STIG - CODELOCK</title>
+    <title>STIG - CLICKERGAME</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/javascript.js"></script>
 </head>
@@ -39,64 +39,26 @@
             
         </div>
 
-<div class="mainContent">
+<div class="mainContent Clickergame">
 
-    <h1 style="text-align: center;">The Codelock</h1>
-<p style="text-align: center;">
-    This is the page showcasing the <strong>codelock</strong>
-</p>
+    <h1 style="text-align: center;">The Clickergame</h1>
 
 <hr>
 
-<div class="codelock">
-    <p id="clninput">
-        Input access code:
-    </p>
-    <button onclick="clinput(this)">
-            1
-    </button>
-    <button onclick="clinput(this)">
-            2
-    </button>
-    <button onclick="clinput(this)">
-            3
-    </button>
-    <br/>
-    <button onclick="clinput(this)">
-            4
-    </button>
-    <button onclick="clinput(this)">
-            5
-    </button>
-    <button onclick="clinput(this)">
-            6
-    </button>
-    <br/>
-    <button onclick="clinput(this)">
-            7
-    </button>
-    <button onclick="clinput(this)">
-            8
-    </button>
-    <button onclick="clinput(this)">
-            9
-    </button>
-</div>
+<div id="objectClick" onclick="changeImage()"></div>
+<div id="pointsInfo"></div>
+<button onclick="buyUpgrade()">Upgrade 10pts</button>
 
-<div>
-    <p id="clcinput">
-        
-    </p>
-</div>
+<hr>
 
 </div>
-
+<br/>
 <div class="footer">
     <a href="#" class="footer-text">
         © Stig Omdal 2020.
     </a>
 </div>
-
+<br/>
 </div>
 
 </body>

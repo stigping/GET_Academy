@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>STIG - CODELOCK</title>
+    <title>STIG - TEST</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="../js/javascript.js"></script>
 </head>
@@ -26,12 +26,13 @@
                 <div class="inner-nav">
                     <ul style="max-height: 884px;">
                         <li><a href="../index.html" style="height: 75px; line-height: 75px;">Index</a></li>
-                        <li class="active"><a href="codelock.html" style="height: 75px; line-height: 75px;">Codelock</a></li>
+                        <li><a href="codelock.html" style="height: 75px; line-height: 75px;">Codelock</a></li>
                         <li><a href="snowman.html" style="height: 75px; line-height: 75px;">Snowman</a></li>
                         <li><a href="quiz.html" style="height: 75px; line-height: 75px;">Quiz</a></li>
                         <li><a href="onmouseover.html" style="height: 75px; line-height: 75px;">onmouseover</a></li>
                         <li><a href="onload.html" style="height: 75px; line-height: 75px;">onload</a></li>
-                        <li><a href="time.html" style="height: 75px; line-height: 75px;">time</a></li>
+                        <li><a href="time.html" style="height: 75px; line-height: 75px;">TEST</a></li>
+                        <li class="active"></li><a href="ferdighet9a.html" style="height: 75px; line-height: 75px;">time</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,53 +42,19 @@
 
 <div class="mainContent">
 
-    <h1 style="text-align: center;">The Codelock</h1>
+    <h1 style="text-align: center;">TEST</h1>
 <p style="text-align: center;">
-    This is the page showcasing the <strong>codelock</strong>
+    TEST <strong>TEST</strong>
 </p>
 
 <hr>
 
-<div class="codelock">
-    <p id="clninput">
-        Input access code:
-    </p>
-    <button onclick="clinput(this)">
-            1
-    </button>
-    <button onclick="clinput(this)">
-            2
-    </button>
-    <button onclick="clinput(this)">
-            3
-    </button>
-    <br/>
-    <button onclick="clinput(this)">
-            4
-    </button>
-    <button onclick="clinput(this)">
-            5
-    </button>
-    <button onclick="clinput(this)">
-            6
-    </button>
-    <br/>
-    <button onclick="clinput(this)">
-            7
-    </button>
-    <button onclick="clinput(this)">
-            8
-    </button>
-    <button onclick="clinput(this)">
-            9
-    </button>
-</div>
+<p>Ferdighet 9a - Valgsetninger Sammenligne to tall: ==, !=, &lt;, &lt;=, >, >=</p>
+    <input id="tallA" type="range" min="1" max="100" step="1" onchange="calculate()" value="2" />
+    <input id="tallB" type="range" min="1" max="100" step="1" onchange="calculate()" value="2" />
+    <div id="resultat"></div>
 
-<div>
-    <p id="clcinput">
-        
-    </p>
-</div>
+<hr>
 
 </div>
 
