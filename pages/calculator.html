@@ -56,20 +56,31 @@
 <script type="text/javascript">
     var resultBox = document.getElementById('resultBox');
 
-    function addCharacter(x) {
-        resultBox.innerHTML += x;
-    }
+    // model
+    let input = '';
 
-    function calculate() {
-        var calculation = resultBox
-            .innerHTML
-            .replace('×', '*')
-            .replace('÷', '/');
-        resultBox.innerHTML = eval(calculation);
-    }
-    function clearResult() {
-        resultBox.innerHTML = '';
-    }
+// view
+show();
+function show() {
+    resultBox.innerHTML = input;
+}
+
+// controller
+function addCharacter(x) {
+    input += x;
+    show();
+}
+
+function calculate() {
+    var calculation = input.replace('×', '*').replace('÷', '/');
+    input = eval(calculation);
+    show();
+}
+
+function clearResult() {
+    input = '';
+    show();
+}
 </script>
 </body>
 </html>
