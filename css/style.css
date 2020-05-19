@@ -97,3 +97,6 @@ div.clickergame {
     font-size: 500%;
     user-select: none;
 }
+.square {
+    position: absolute;
+}

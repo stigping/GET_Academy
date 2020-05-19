@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 
 <head>
@@ -8,7 +8,7 @@
     <script src="../js/javascript.js"></script>
 </head>
 
-<body>
+<body onload="show()">
 
 <div class="page">
 
@@ -26,12 +26,13 @@
                 <div class="inner-nav">
                     <ul style="max-height: 884px;">
                         <li><a href="../index.html" style="height: 75px; line-height: 75px;">Index</a></li>
-                        <li class="active"><a href="codelock.html" style="height: 75px; line-height: 75px;">Codelock</a></li>
-                        <li><a href="snowman.html" style="height: 75px; line-height: 75px;">Snowman</a></li>
-                        <li><a href="quiz.html" style="height: 75px; line-height: 75px;">Quiz</a></li>
-                        <li><a href="onmouseover.html" style="height: 75px; line-height: 75px;">onmouseover</a></li>
-                        <li><a href="onload.html" style="height: 75px; line-height: 75px;">onload</a></li>
-                        <li><a href="time.html" style="height: 75px; line-height: 75px;">time</a></li>
+                        <li><a href="../pages/codelock.html" style="height: 75px; line-height: 75px;">Codelock</a></li>
+                        <li><a href="../pages/snowman.html" style="height: 75px; line-height: 75px;">Snowman</a></li>
+                        <li><a href="../pages/quiz.html" style="height: 75px; line-height: 75px;">Quiz</a></li>
+                        <li><a href="../pages/onmouseover.html" style="height: 75px; line-height: 75px;">onmouseover</a></li>
+                        <li><a href="../pages/onload.html" style="height: 75px; line-height: 75px;">onload</a></li>
+                        <li><a href="../pages/time.html" style="height: 75px; line-height: 75px;">time</a></li>
+                        <li class="active"><a href="../pages/clickergame.html" style="height: 75px; line-height: 75px;">Clickergame</a></li>
                     </ul>
                 </div>
             </div>
@@ -39,15 +40,17 @@
             
         </div>
 
-<div class="mainContent Clickergame">
+<div class="mainContent">
 
     <h1 style="text-align: center;">The Clickergame</h1>
 
 <hr>
 
-<div id="objectClick" onclick="changeImage()"></div>
+<div class="clickergame">
+<div id="image" onclick="changeImage()"></div>
 <div id="pointsInfo"></div>
-<button onclick="buyUpgrade()">Upgrade 10pts</button>
+<button onclick="buyUpgrade()">Kjøp oppgradering (10 poeng)</button>
+</div>
 
 <hr>
 
