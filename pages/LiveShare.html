@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hei</title>
     <style>
 
         div.page {
@@ -13,6 +13,14 @@
             grid-template-rows: 250px 250px 250px;
             padding: 30px;
             grid-gap: 0px;
+        }
+        .linje0 {
+            background-image: url("https://ae01.alicdn.com/kf/HTB1wCQAafvsK1RjSspdq6AZepXa7/Unicorn-Light-Switch-Stickers-For-Kids-Rooms-Baby-Nursery-Home-Cartoon-Cute-Animal-Horse-Unicorn-Cup.jpg_q50.jpg");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
         }
 
         .linje1 {
@@ -25,14 +33,6 @@
         }
         .linje2 {
             background-image: url("https://extra-leker.freetls.fastly.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/t/nti-864728-d_1.jpg");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-        .linje3 {
-            background-image: url("https://ae01.alicdn.com/kf/HTB1wCQAafvsK1RjSspdq6AZepXa7/Unicorn-Light-Switch-Stickers-For-Kids-Rooms-Baby-Nursery-Home-Cartoon-Cute-Animal-Horse-Unicorn-Cup.jpg_q50.jpg");
             background-size: 250px;
             border: 1px solid black;
             padding: 20px;
@@ -87,7 +87,7 @@
             font-size: 30px;
             text-align: center;
         }
-        .linje10 {
+        .linje3 {
             background-image: url("https://data.whicdn.com/images/116944062/original.png");
             background-size: 250px;
             border: 1px solid black;
@@ -99,103 +99,31 @@
     </style>
 </head>
 
-<body>
-
-    <div class="page">
-        <div id="1" class="linje3" onclick="bytt(this)"></div>
-        <div id="2" class="linje3" onclick="bytt(this)"></div>
-        <div id="7" class="linje3" onclick="bytt(this)"></div>
-        <div id="9" class="linje3" onclick="bytt(this)"></div>
-        <div id="4" class="linje3" onclick="bytt(this)"></div>
-        <div id="10" class="linje3" onclick="bytt(this)"></div>
-        <div id="5" class="linje3" onclick="bytt(this)"></div>
-        <div id="6" class="linje3" onclick="bytt(this)"></div>
-        <div id="8" class="linje3" onclick="bytt(this)"></div>
+<body onload="lagDiv()">
+    <div id="page1" class="page">
 
     </div>
-    <script>
-        var fase = 1;
+<script>
         let currentDiv ="";
-        let lastDic ="";
- function changeI() {
- let element = document.getElementById("1");
- element.classList.toggle("linje3");
- }
- function bytt(bip) {
+        var i = 1;
+        function lagDiv() {
+            if (i <= 9) {
+            document.getElementById('page1').innerHTML += `<div id="${i}" class="linje0" onclick="bytt(this)"></div>`;
+            i++;
+            lagDiv();
+
+        }}
+        function bytt(bip) {
+            var superID = bip.id;
+
     currentDiv = bip.outerHTML;
-    if (currentDiv == '<div id="2" class="linje2" onclick="bytt(this)"></div>') {
-        //lastDiv ='<div id="2" class="linje2" onclick="bytt(this)"></div>';
-        bip.outerHTML = '<div id="2" class="linje3" onclick="bytt(this)"></div>';
-        console.log('Bytter 2 til 3');
-    }
-    else if (currentDiv == '<div id="1" class="linje1" onclick="bytt(this)"></div>') {
-        //lastDiv ='<div id="1" class="linje1" onclick="bytt(this)"></div>';
-        bip.outerHTML = '<div id="1" class="linje3" onclick="bytt(this)"></div>';
-        console.log('Bytter 1 til 3');
-    } else if (currentDiv == '<div id="1" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="1" class="linje1" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 1');
-    } else if (currentDiv == '<div id="2" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="2" class="linje2" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 2');
-    }
-     else if (currentDiv == '<div id="4" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="4" class="linje4" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 4');
-    }
-     else if (currentDiv == '<div id="4" class="linje4" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="4" class="linje3" onclick="bytt(this)"></div>';
-    console.log('Bytter 4 til 3');
-    }
-    else if (currentDiv == '<div id="5" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="5" class="linje5" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 5');
-    }
-     else if (currentDiv == '<div id="5" class="linje5" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="5" class="linje3" onclick="bytt(this)"></div>';
-    console.log('Bytter 5 til 3');
-    }    else if (currentDiv == '<div id="6" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="6" class="linje6" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 6');
-    }
-     else if (currentDiv == '<div id="6" class="linje6" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="6" class="linje3" onclick="bytt(this)"></div>';
-    console.log('Bytter 6 til 3');
-    }    else if (currentDiv == '<div id="7" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="7" class="linje7" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 7');
-    }
-     else if (currentDiv == '<div id="7" class="linje7" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="7" class="linje3" onclick="bytt(this)"></div>';
-    console.log('Bytter 7 til 3');
-    }
-    else if (currentDiv == '<div id="8" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="8" class="linje8" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 8');
-    }
-     else if (currentDiv == '<div id="8" class="linje8" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="8" class="linje3" onclick="bytt(this)"></div>';
-    console.log('Bytter 8 til 3');
-    }    else if (currentDiv == '<div id="9" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="9" class="linje9" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 9');
-    }
-     else if (currentDiv == '<div id="9" class="linje9" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="9" class="linje3" onclick="bytt(this)"></div>';
-    console.log('Bytter 9 til 3');
-    }    else if (currentDiv == '<div id="10" class="linje3" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="10" class="linje10" onclick="bytt(this)"></div>';
-    console.log('Bytter 3 til 10');
-    }
-     else if (currentDiv == '<div id="10" class="linje10" onclick="bytt(this)"></div>') {
-    bip.outerHTML = '<div id="10" class="linje3" onclick="bytt(this)"></div>';
-    console.log('Bytter 10 til 3');
-    }
-    }
+    if (currentDiv == `<div id="${superID}" class="linje0" onclick="bytt(this)"></div>`)  {
+        bip.outerHTML = `<div id="${superID}" class="linje${superID}" onclick="bytt(this)"></div>`
+} else {
+    bip.outerHTML = `<div id="${superID}" class="linje0" onclick="bytt(this)"></div>`;
+}}
 
-    //bip.innerHTML = `<div class="linje3" onclick="bytt(this)"></div>`;
-
-//}
+// id (currentDiv == '<div id="${id}" class="linje0" onclick="bytt(this)"></div>')
 </script>
 
 </body>
