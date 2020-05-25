@@ -143,6 +143,7 @@ function calculate() {
 // some stuff I don't remember END
 
 // Clickergame START
+/*
 var imageDiv = document.getElementById("image");
 var pointsDiv = document.getElementById("pointsInfo");
 
@@ -168,6 +169,7 @@ function show() {
   imageDiv.innerHTML = points % 2 === 0 ? "😀" : "😃";
   pointsDiv.innerHTML = points;
 }
+*/
 // Clickergame END
 
 // Multiple functions inside one function START

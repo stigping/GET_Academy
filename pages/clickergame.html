@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>STIG - CLICKERGAME</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <script src="../js/javascript.js"></script>
+    <script type="text/javascript" src="../js/javascript.js"></script>
+    <script type="text/javascript" src="../js/clickergame.js"></script>
 </head>
 
 <body onload="show()">
@@ -47,9 +48,9 @@
 <hr>
 
 <div class="clickergame">
-<div id="image" onclick="changeImage()"></div>
-<div id="pointsInfo"></div>
-<button onclick="buyUpgrade()">Kjøp oppgradering (10 poeng)</button>
+    <div id="image" onclick="changeImage()"></div>
+    <div id="pointsInfo"></div>
+    <button onclick="buyUpgrade()">Kjøp oppgradering (10 poeng)</button>
 </div>
 
 <hr>
@@ -63,6 +64,35 @@
 </div>
 <br/>
 </div>
+<!--
+<script>
+    var imageDiv = document.getElementById('image');
+    var pointsDiv = document.getElementById('pointsInfo');
 
+    // model
+    var points = 0;
+    var pointsPerClick = 1;
+
+    // controller
+    function changeImage() {
+        points += pointsPerClick;
+        show();
+    }
+
+    function buyUpgrade() {
+        if (points < 10) return;
+        points -= 10;
+        pointsPerClick++;
+        show();
+    }
+
+    // view
+    show();
+    function show() {
+        imageDiv.innerHTML = points % 2 === 0 ? '😀' : '😃';
+        pointsDiv.innerHTML = points;
+    }
+</script>
+-->
 </body>
 </html>
