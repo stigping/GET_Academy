@@ -155,6 +155,7 @@ var pointsPerClick = 1;
 function changeImage() {
   points += pointsPerClick;
   show();
+  console.log('changeImage LOGGED!');
 }
 
 function buyUpgrade() {
@@ -162,12 +163,14 @@ function buyUpgrade() {
   points -= 10;
   pointsPerClick++;
   show();
+  console.log('buyUpgrade LOGGED!');
 }
 
 // view
 function show() {
   imageDiv.innerHTML = points % 2 === 0 ? "😀" : "😃";
   pointsDiv.innerHTML = points;
+  console.log('show LOGGED!');
 }
 
 // Clickergame END
