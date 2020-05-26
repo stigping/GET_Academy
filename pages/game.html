@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 
 <head>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
-<body>
+<body onload="GameView()">
 
 <div class="page">
 
@@ -41,32 +41,14 @@
 
 <div class="mainContent">
 
-    <h1 style="text-align: center;">The Calculator</h1>
+    <h1 style="text-align: center;">The Game</h1>
 
 <hr>
 
-<div class="calc">
-<div id="resultBox" class="resultBox" id="screen"></div>
-
-    <div class="firstInRow" onclick="addCharacter(7)">7</div>
-    <div onclick="addCharacter(8)">8</div>
-    <div onclick="addCharacter(9)">9</div>
-    <div onclick="addCharacter('÷')">÷</div>
-
-    <div class="firstInRow" onclick="addCharacter(4)">4</div>
-    <div onclick="addCharacter(5)">5</div>
-    <div onclick="addCharacter(6)">6</div>
-    <div onclick="addCharacter('×')">×</div>
-
-    <div class="firstInRow" onclick="addCharacter(1)">1</div>
-    <div onclick="addCharacter(2)">2</div>
-    <div onclick="addCharacter(3)">3</div>
-    <div onclick="addCharacter('-')">-</div>
-
-    <div class="firstInRow" onclick="addCharacter(0)">0</div>
-    <div onclick="clearResult();">C</div>
-    <div onclick="calculate()">=</div>
-    <div onclick="addCharacter('+')">+</div>
+<div class="game">
+    <div id="emoji" onclick="GameController()"></div>
+    <div id="expInfo"></div>
+    <button onclick="GameBuyUpgrade1(this)">Buy Upgrade (10pts)</button>
 </div>
 
 <hr>

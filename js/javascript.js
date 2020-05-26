@@ -15,7 +15,12 @@ function doAnswer3() {
   document.getElementById("answer2").innerHTML = "";
 }
 // QUIZ END
-
+/*
+*
+*
+*
+*
+*/
 // onstuffs and things START
 function doSomething1() {
   console.log("ondblclick was triggered!");
@@ -37,7 +42,12 @@ function doChange(tableo) {
   //        console.log('true');
 }
 // onMouseOver END
-
+/*
+*
+*
+*
+*
+*/
 // Codelock START
 var cln01 = 0;
 var clt01 = "clt01 ";
@@ -64,14 +74,24 @@ function codelock() {
   }
 }
 // Codelock END
-
+/*
+*
+*
+*
+*
+*/
 // onLoad START
 function websiteLoaded() {
   document.getElementById("loadText").innerText = "success";
   console.log("The website has loaded!");
 }
 // onLoad END
-
+/*
+*
+*
+*
+*
+*/
 // onClick + Show Time START
 function changeText() {
   document.getElementById("changeThis").innerHTML = "No.";
@@ -79,7 +99,12 @@ function changeText() {
     "Current time:" + new Date().toTimeString();
 }
 // onClick + Show Time END
-
+/*
+*
+*
+*
+*
+*/
 // some stuff I don't remember START
 var tallA = "2";
 var tallB = "2";
@@ -141,7 +166,12 @@ function calculate() {
   }
 }
 // some stuff I don't remember END
-
+/*
+*
+*
+*
+*
+*/
 // Clickergame START
 
 var imageDiv = document.getElementById("image");
@@ -174,7 +204,12 @@ function show() {
 }
 
 // Clickergame END
-
+/*
+*
+*
+*
+*
+*/
 // Multiple functions inside one function START
 function multiFunc(trigEvent) {
   document.getElementById("info").innerHTML += "<li>" + trigEvent + "</li>";
@@ -234,21 +269,67 @@ function tilfeldigTall(minimum, maksimum) {
   return minimum + Math.floor(Math.random() * (maksimum - minimum + 1));
 }
 // RNG END
-
-// Calculator START
 /*
-var resultBox = document.getElementById("resultBox");
+*
+*
+*
+*
+*/
+// Calculator START
+var resultBox = document.getElementById('resultBox');
 
+//Model
+
+//View
 function addCharacter(x) {
   resultBox.innerHTML += x;
 }
 
+function clearResult() {
+  resultBox.innerHTML = '';
+}
+//Controller
+
 function calculate() {
-  var calculation = resultBox.innerHTML.replace("×", "*").replace("÷", "/");
+  var calculation = resultBox
+      .innerHTML
+      .replace('×', '*')
+      .replace('÷', '/');
   resultBox.innerHTML = eval(calculation);
 }
-function clearResult() {
-  resultBox.innerHTML = "";
-}
-*/
+
 // Calculator END
+/*
+*
+*
+*
+*
+*/
+// ? Game START
+var emojiDiv = document.getElementById('emoji');
+var expDiv = document.getElementById('expInfo');
+
+//Model
+var exp = 0;
+var expPerClickU1 = 1;
+
+//function GameModel() {}
+
+//View
+function GameView() {
+  emojiDiv.innerHTML = exp % 2 === 0 ? '🐺' : '🐻';
+  expDiv.innerHTML = exp;
+}
+
+//Controller
+function GameController() {
+  exp += expPerClickU1;
+  GameView();
+}
+function GameBuyUpgrade1() {
+  if (exp < 10) return;
+  exp -= 10;
+  expPerClickU1++;
+  GameView();
+}
+// ? Game END
