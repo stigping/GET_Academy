@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 2 - LS2</title>
+    <style>
+        body {
+            height: 100%;
+        }
+        .valg {
+            list-style-type: none;
+
+        }
+
+        .valg input:hover {
+            color: #ff4655;
+        }
+       
+        #story {
+            border: 1px solid black;
+            display: inline-block;
+        }
+        #story div {
+            font-size:2.5vw;
+            float: left;
+            margin: 1px;
+            width: 0px auto;
+            height: 0 auto;
+            padding-left: 5px;
+        }
+        .btn {
+            margin-top: 4px;
+            margin-right: 1px;
+            line-height: 1;
+            border: none;
+            border-radius: 25%;
+            outline: none;
+            width:90px;
+            height:40px;
+            cursor:pointer;
+            font-size:20px;
+            font-family:lucida;
+            background-color: #0c131b;
+            color: #ff4655;
+
+        }
+        .btn:active {
+            background: #0f1923;
+        }
+        .story.dot {
+            padding-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="story">
+        <div>Det var en </div><div id="s1">___</div><div> og </div><div id="s2">___</div><div> gutt som var veldig </div><div id="s3">___</div><div> Han bodde under en </div><div id="s4">___</div>
+    </div>
+
+    <div class="valg">
+        <input class="btn" type="button" value="Liten" onclick="s1.innerHTML = 'liten'" />
+        <input class="btn" type="button" value="Stor" onclick="s1.innerHTML = 'stor'" /> <br />
+        <input class="btn" type="button" value="Fin" onclick="s2.innerHTML = 'fin'" />
+        <input class="btn" type="button" value="Ekkel" onclick="s2.innerHTML = 'ekkel'" /> <br />
+        <input class="btn" type="button" value="Sulten" onclick="s3.innerHTML = 'sulten.'" />
+        <input class="btn" type="button" value="Mett" onclick="s3.innerHTML = 'mett.'" /> <br />
+        <input class="btn" type="button" value="Foss" onclick="s4.innerHTML = 'foss.'" />
+        <input class="btn" type="button" value="Stein" onclick="s4.innerHTML = 'stein.'" />
+    </div>
+
+<script>
+var s1 = document.getElementById('s1');
+var s2 = document.getElementById('s2');
+var s3 = document.getElementById('s3');
+var s4 = document.getElementById('s4');
+
+//M
+//var boller = 'boller';
+//var brus = 'brus';
+//var skogen = 'skogen';
+//var kake = 'kake';
+//var elg = 'elg';
+//var stein = 'stein';
+
+//V
+
+//function editStory() {
+//    document.getElementById('story').innerHTML += `Det var en '${uid}' også '${uid}' de var veldig '${uid}' de bodde under en '${uid}'`
+//}
+    
+    
+
+//C
+
+
+</script>
+
+</body>
+
+</html>
