@@ -40,64 +40,73 @@
             width:90px;
             height:40px;
             cursor:pointer;
-            font-size:20px;
+            font-size:15px;
             font-family:lucida;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-decoration: none;
             background-color: #0c131b;
             color: #ff4655;
+            box-shadow: 0 0 0 1px inset rgba(#ece8e1, 0.3);
 
         }
         .btn:active {
             background: #0f1923;
-        }
-        .story.dot {
-            padding-left: 0px;
         }
     </style>
 </head>
 
 <body>
 
-    <div id="story">
-        <div>Det var en </div><div id="s1">___</div><div> og </div><div id="s2">___</div><div> gutt som var veldig </div><div id="s3">___</div><div> Han bodde under en </div><div id="s4">___</div>
-    </div>
+    <div id="story"><div> Det var en ___ og ___ gutt som var veldig ___. Han bodder under en ___.</div></div>
 
     <div class="valg">
-        <input class="btn" type="button" value="Liten" onclick="s1.innerHTML = 'liten'" />
-        <input class="btn" type="button" value="Stor" onclick="s1.innerHTML = 'stor'" /> <br />
-        <input class="btn" type="button" value="Fin" onclick="s2.innerHTML = 'fin'" />
-        <input class="btn" type="button" value="Ekkel" onclick="s2.innerHTML = 'ekkel'" /> <br />
-        <input class="btn" type="button" value="Sulten" onclick="s3.innerHTML = 'sulten.'" />
-        <input class="btn" type="button" value="Mett" onclick="s3.innerHTML = 'mett.'" /> <br />
-        <input class="btn" type="button" value="Foss" onclick="s4.innerHTML = 'foss.'" />
-        <input class="btn" type="button" value="Stein" onclick="s4.innerHTML = 'stein.'" />
+        <input class="btn" type="button" value="Liten" onclick="add1('liten')">
+        <input class="btn" type="button" value="Stor" onclick="add1('stor')"> <br>
+        <input class="btn" type="button" value="Fin" onclick="add2('fin')">
+        <input class="btn" type="button" value="Ekkel" onclick="add2('ekkel')"> <br>
+        <input class="btn" type="button" value="Sulten" onclick="add3('sulten')">
+        <input class="btn" type="button" value="Mett" onclick="add3('mett')"> <br>
+        <input class="btn" type="button" value="Foss" onclick="add4('foss')">
+        <input class="btn" type="button" value="Stein" onclick="add4('stein')">
     </div>
 
 <script>
-var s1 = document.getElementById('s1');
-var s2 = document.getElementById('s2');
-var s3 = document.getElementById('s3');
-var s4 = document.getElementById('s4');
+var storyDiv = document.getElementById('story');
 
 //M
-//var boller = 'boller';
-//var brus = 'brus';
-//var skogen = 'skogen';
-//var kake = 'kake';
-//var elg = 'elg';
-//var stein = 'stein';
+var word1 = '___';
+var word2 = '___';
+var word3 = '___';
+var word4 = '___';
 
 //V
+show()
+function show() {
+storyDiv.innerHTML = `<div> Det var en ${word1} og ${word2} gutt som var veldig ${word3}. Han bodder under en ${word4}.</div>`;
+}
 
-//function editStory() {
-//    document.getElementById('story').innerHTML += `Det var en '${uid}' også '${uid}' de var veldig '${uid}' de bodde under en '${uid}'`
-//}
     
-    
-
 //C
-
-
+function add1(word) {
+    word1 = word;
+    return show();
+}
+function add2(word) {
+    word2 = word;
+    return show();
+}
+function add3(word) {
+    word3 = word;
+    return show();
+}
+function add4(word) {
+    word4 = word;
+    return show();
+}
 </script>
+
+
 
 </body>
 
