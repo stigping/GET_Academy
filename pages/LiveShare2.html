@@ -8,19 +8,31 @@
     <style>
         body {
             height: 100%;
+            background-color: #0f1923;
+            color: ;
         }
         .valg {
-            list-style-type: none;
-
+            width: 50%;
+            margin: 0 auto;
         }
 
-        .valg input:hover {
-            color: #ff4655;
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
        
         #story {
-            border: 1px solid black;
-            display: inline-block;
+            border: 1px solid #ece8e1;
+            display: table;
+            margin: 0 auto;
+            color: #ece8e1;
         }
         #story div {
             font-size:2.5vw;
@@ -31,45 +43,71 @@
             padding-left: 5px;
         }
         .btn {
-            margin-top: 4px;
-            margin-right: 1px;
+            position: relative;
+            margin: 10px auto;
             line-height: 1;
-            border: none;
-            border-radius: 25%;
             outline: none;
-            width:90px;
-            height:40px;
-            cursor:pointer;
-            font-size:15px;
-            font-family:lucida;
+            width: 100%;
+            max-width: 200px;
+            min-width: 10px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: lucida;
             font-weight: 500;
             text-transform: uppercase;
             text-decoration: none;
-            background-color: #0c131b;
+            background-color: #000000;
             color: #ff4655;
-            box-shadow: 0 0 0 1px inset rgba(#ece8e1, 0.3);
-
+            box-shadow: 0 0 0 1px;
+        }
+        .btn:hover {
+            color: #ece8e1;
         }
         .btn:active {
-            background: #0f1923;
+            background: #090d11;
         }
     </style>
 </head>
 
 <body>
 
-    <div id="story"><div> Det var en ___ og ___ gutt som var veldig ___. Han bodder under en ___.</div></div>
+    <div id="story"></div>
 
-    <div class="valg">
-        <input class="btn" type="button" value="Liten" onclick="add1('liten')">
-        <input class="btn" type="button" value="Stor" onclick="add1('stor')"> <br>
-        <input class="btn" type="button" value="Fin" onclick="add2('fin')">
-        <input class="btn" type="button" value="Ekkel" onclick="add2('ekkel')"> <br>
-        <input class="btn" type="button" value="Sulten" onclick="add3('sulten')">
-        <input class="btn" type="button" value="Mett" onclick="add3('mett')"> <br>
-        <input class="btn" type="button" value="Foss" onclick="add4('foss')">
-        <input class="btn" type="button" value="Stein" onclick="add4('stein')">
-    </div>
+        <div class="valg">
+            <div class="row">
+                <div class="column">
+                    <input class="btn" type="button" value="Liten" onclick="add1('liten')">
+                </div>
+                <div class="column">
+                    <input class="btn" type="button" value="Stor" onclick="add1('stor')">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <input class="btn" type="button" value="Fin" onclick="add2('fin')">
+                </div>
+                <div class="column">
+                    <input class="btn" type="button" value="Ekkel" onclick="add2('ekkel')">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <input class="btn" type="button" value="Sulten" onclick="add3('sulten')">
+                </div>
+                <div class="column">
+                    <input class="btn" type="button" value="Mett" onclick="add3('mett')">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <input class="btn" type="button" value="Foss" onclick="add4('foss')">
+                </div>
+                <div class="column">
+                    <input class="btn" type="button" value="Stein" onclick="add4('stein')">
+                </div>
+            </div>
+        </div>
 
 <script>
 var storyDiv = document.getElementById('story');
@@ -83,7 +121,7 @@ var word4 = '___';
 //V
 show()
 function show() {
-storyDiv.innerHTML = `<div> Det var en ${word1} og ${word2} gutt som var veldig ${word3}. Han bodder under en ${word4}.</div>`;
+storyDiv.innerHTML = `<div> Det var en ${word1} og ${word2} gutt som var veldig ${word3}. Han bodde under en ${word4}.</div>`;
 }
 
     
