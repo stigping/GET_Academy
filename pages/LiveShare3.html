@@ -5,14 +5,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 2 - LS3</title>
-    <style></style>
+    <script src="https://kit.fontawesome.com/1e3bbfe500.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+        .page {
+            height: 100vh;
+            position: relative;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 25px 10fr;
+            grid-template-areas: 'menu menu' 'mainContent mainContent';
+        }
+        .header {
+            grid-area: menu;
+            background-color: gray;
+            text-align: right;
+        }
+        .header ul {
+            list-style: none;
+            margin: auto;
+            line-height: 1.5;
+        }
+        .header ul li {
+            float: left;
+            margin-left: 40px;
+            margin-right: 45px;
+        }
+        .header ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #ece8e1;
+            margin: auto;
+            font-size: 14px;
+            text-align: left;
+            display: inline-block;
+        }
+        .header-container {
+            background-color: #555;
+            color: white;
+        }
+        .header-toggle {
+            background-color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+        .header-toggle #menuLinks {
+            display: none;
+        }
+        .header-toggle a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        }
+        .header-toggle a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .header-toggle a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .menu-mainText {
+            text-align: right;
+            text-transform: uppercase;
+        }
+        .active {
+            background-color: #333;
+            color: white;
+        }
+        @media only screen and (max-width: 1859px) {
+            .page {
+                grid-template-rows: 50px 10fr;
+            }           
+        }
+        @media only screen and (max-width: 958px) {
+            .header {
+                display: none;
+            }           
+        }
+        @media only screen and (min-width: 958px) {
+            .header-toggle {
+                display: none;
+            }           
+        }
+        .mainContent {
+            grid-area: mainContent;
+            text-align: center;
+        }
+        div .mainContent {
+            font-size: 500%;
+            user-select: none;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div>Hello World!</div>
+    <div class="page">
+        <div class="header">
+            <ul>
+                <li>
+                    <a href="../pages/LiveShare.html">LiveShare 01</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare2.html">LiveShare 02</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare3.html">LiveShare 03</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare4.html">LiveShare 04</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare5.html">LiveShare 05</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare6.html">LiveShare 06</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare7.html">LiveShare 07</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare8.html">LiveShare 08</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare9.html">LiveShare 09</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare10.html">LiveShare 10</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-container">
+        <div class="header-toggle">
+                <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            <a href="#" class="active menu-mainText">Menu</a>
+            <div id="menuLinks">
+                <a href="../pages/LiveShare.html">LiveShare 01</a>
+                <a href="../pages/LiveShare2.html">LiveShare 02</a>
+                <a href="../pages/LiveShare3.html">LiveShare 03</a>
+                <a href="../pages/LiveShare4.html">LiveShare 04</a>
+                <a href="../pages/LiveShare5.html">LiveShare 05</a>
+                <a href="../pages/LiveShare6.html">LiveShare 06</a>
+                <a href="../pages/LiveShare7.html">LiveShare 07</a>
+                <a href="../pages/LiveShare8.html">LiveShare 08</a>
+                <a href="../pages/LiveShare9.html">LiveShare 09</a>
+                <a href="../pages/LiveShare10.html">LiveShare 10</a>
+            </div>
+        </div>
+    </div>
+    <div class="mainContent">
 
-<script></script>
+        <div id="image" onclick="changeImage()"></div>
+        <div id="pointsInfo"></div>
+        <button onclick="buyUpgrade()">Kjøp oppgradering (10 poeng)</button>
+        <button onclick="buyBetterUpgrade()">Kjøp bedre oppgradering (20 poeng)</button>
+
+    </div>
+</div>
+
+<script>
+
+    function openMenu() {
+        var x = document.getElementById("menuLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+        var imageDiv = document.getElementById('image');
+        var pointsDiv = document.getElementById('pointsInfo');
+//Model
+        var points = 0;
+        var pointsPerClick = 1;
+
+//View
+        show();
+        function show() {
+            imageDiv.innerHTML = points % 2 === 0 ? ' 🐁 ' : ' 🦄' ;
+            pointsDiv.innerHTML = points;
+        }
+
+//Controller
+        function changeImage() {
+            points += pointsPerClick;
+            show();
+        }
+
+        function buyUpgrade() {
+            if (points < 10) return;
+            points -= 10;
+            pointsPerClick++;
+            show();
+        }
+        function buyBetterUpgrade() {
+            if (points < 20) return;
+            points -= 20;
+            pointsPerClick += 2;
+            show();
+
+        }
+
+
+</script>
 
 </body>
 
