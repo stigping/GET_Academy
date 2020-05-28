@@ -98,12 +98,40 @@
         .mainContent {
             grid-area: mainContent;
         }
+        #fir1 {
+            background-color: lightgray;
+            border: 2px solid green;
+            border-radius: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+        }
+        #fir2 {
+            background-color: lightgray;
+            border: 2px solid green;
+            border-radius: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+        }
+        #eahistory {
+            height:150px;
+            width:300px;
+            border:1px solid #ccc;
+            font:16px/26px Georgia, Garamond, Serif;
+            overflow:auto;
+        }
     </style>
 </head>
 
-<body>
-
-    <div class="page">
+<body onload="sjekkHealth(), showStat()">
+<div class="page">
         <div class="header">
             <ul>
                 <li>
@@ -160,9 +188,13 @@
     </div>
     <div class="mainContent">
 
-        <div class="game">
-
-        </div>
+            <div id="fir1"></div>
+            <div id="fir2"></div>
+            <button onclick="attack1(), scrollDo()">Attack</button>
+            <button onclick="channel1(), scrollDo()">Channel +10 Mana</button>
+            <button onclick="fireball1(), scrollDo()">Fireball -100 Mana</button>
+            <div id="staterinos"></div>
+            <div id="eahistory"></div>
 
     </div>
 </div>
@@ -179,12 +211,134 @@
     }
 
 
-//Model
-
+    var aHistory = document.getElementById("eahistory");
+//Model  
+    var playerHealth = 100;
+    var enemyHealth = 100;
+    var playerMana = 0;
+    var enemyMana = 0;
+    var playerDamage = Math.floor(Math.random() * 30) + 1;
+    var enemyDamage = Math.floor(Math.random() * 30) + 1;
+    var flow = 50;
+    var turn = 1;
+    var playerFireballtick = 0;
+    var enemyFireballtick = 0;
+    var fireballDamage = Math.floor(Math.random() * 100) + 1;
+      
 //View
-
+      function scrollDo() {
+        aHistory.scrollTop = aHistory.scrollHeight;
+      }
+      function attack1() {
+        onKill();
+        onDeath();
+        if (turn == 1) {
+          enemyHealth -= playerDamage;
+          aHistory.innerHTML += `Player attack for ${playerDamage} !</br></br>`;
+          ftick();
+          sjekkHealth();
+          turn = 2;
+          eAttack();
+          
+        }
+      }
+      function fireball1() {
+        onKill();
+        onDeath();
+        if (turn == 1 && playerMana >= 100) {
+          enemyHealth -= fireballDamage;
+          playerMana -= 100;
+          turn = 2;
+          aHistory.innerHTML +=
+            "Player threw a fireball ticking for " +
+            playerFireballtick +
+            " damage!<br></br>";
+          showStat();
+          ftick();
+          sjekkHealth();
+          eAttack();
+        }
+      }
+      function fireball2() {
+        if (turn == 2 && enemyMana >= 100) {
+          playerHealth -= fireballDamage;
+          enemyFireballtick += 1;
+          enemyMana -= 100;
+          turn = 1;
+          aHistory.innerHTML +=
+            "Enemy threw a fireball ticking for " +
+            enemyFireballtick +
+            " damage!<br></br>";
+          showStat();
+          ftick();
+          sjekkHealth();
+        }
+      }
+      function showStat() {
+        document.getElementById("staterinos").innerHTML =
+          "Player Flame Tick:" + playerFireballtick;
+      }
+      function sjekkHealth() {
+        document.getElementById("fir1").innerHTML =
+          "Hero! <br></br>Health:" + playerHealth + "<br></br>" + "Mana:" + playerMana;
+        document.getElementById("fir2").innerHTML =
+          "Enemy! <br></br>Health:" + enemyHealth + "<br></br>" + "Mana:" + enemyMana;
+      }
+      function channel1() {
+        onKill();
+        onDeath();
+        playerMana += flow;
+        turn = 2;
+        aHistory.innerHTML += "Player gained " + flow + " Mana!<br></br>";
+        ftick();
+        sjekkHealth();
+        eAttack();
+        
+      }
+      function ftick() {
+        playerHealth -= enemyFireballtick;
+        enemyHealth -= playerFireballtick;
+      }
+      function eAttack() {
+        var epat = 1 + Math.floor(Math.random() * 3);
+        if (epat == 1) {
+          playerHealth -= enemyDamage;
+          sjekkHealth();
+          aHistory.innerHTML += "Enemy attack for " + enemyDamage + "!<br></br>";
+          turn = 1;
+        } else if (epat == 2) {
+          enemyMana += flow;
+          aHistory.innerHTML += "Enemy gained " + flow + " Mana!<br></br>";
+          sjekkHealth();
+          turn = 1;
+        } else if (epat == 3 && enemyMana >= 100) {
+          fireball2();
+        } else {
+          eAttack();
+        }
+      }
 //Controller
-
+function onDeath() {
+    if (playerHealth <= 0) {
+        console.log('Du tapte');
+        newGame();
+    }
+}
+function onKill() {
+    if (enemyHealth <= 0) {
+        console.log('Du vant!');
+        newGame();
+    }
+}
+function newGame() {
+    playerHealth = 100;
+    enemyHealth = 100;
+    playerMana = 0;
+    enemyMana = 0;
+    turn = 1;
+    playerFireballtick = 0;
+    enemyFireballtick = 0;
+}
 </script>
 
 </body>
