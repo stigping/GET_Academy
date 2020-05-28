@@ -1,0 +1,88 @@
+
+        .gridGame {
+            display: grid;
+            grid-template-columns: 250px 250px 250px;
+            grid-template-rows: 250px 250px 250px;
+            padding: 30px;
+            grid-gap: 0px;
+        }
+        .linje0 {
+            background-image: url("https://ae01.alicdn.com/kf/HTB1wCQAafvsK1RjSspdq6AZepXa7/Unicorn-Light-Switch-Stickers-For-Kids-Rooms-Baby-Nursery-Home-Cartoon-Cute-Animal-Horse-Unicorn-Cup.jpg_q50.jpg");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje1 {
+            background-image: url("https://billig-billy.dk/cache/1180585/magnet-3d-med-enhjoerning-fit-1600x1600x100.jpg");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje2 {
+            background-image: url("https://extra-leker.freetls.fastly.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/t/nti-864728-d_1.jpg");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje3 {
+            background-image: url("https://data.whicdn.com/images/116944062/original.png");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje4 {
+            background-image: url("https://cdn.shopify.com/s/files/1/1365/2497/products/Glow-Unicorn-Mask_2000x.png?v=1553633463");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje5 {
+            background-image: url("https://i.pinimg.com/236x/df/54/e7/df54e71bb986c34edb44d630b754201e--unicorn-hat-cute-unicorn.jpg");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje6 {
+            background-image: url("https://dslv9ilpbe7p1.cloudfront.net/X0lMEsJM-BiCzHXcssE61A_store_logo_image.png");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje7 {
+            background-image: url("https://images-na.ssl-images-amazon.com/images/I/819jYvIkK3L._AC_SL1500_.jpg");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje8 {
+            background-image: url("https://i.pinimg.com/originals/dc/9b/46/dc9b464aac04eaa5b37c0747fc3ca9ca.jpg");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .linje9 {
+            background-image: url("https://image.freepik.com/free-vector/cute-green-snake-cartoon_29190-4813.jpg");
+            background-size: 250px;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }

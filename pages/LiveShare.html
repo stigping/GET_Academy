@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 2 - LS1</title>
     <script src="https://kit.fontawesome.com/1e3bbfe500.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/gridgame.css">
     <style>
         body {
             margin: 0;
@@ -15,11 +16,11 @@
             position: relative;
             display: grid;
             grid-template-columns: 200px 1fr;
-            grid-template-rows: 25px 10fr;
-            grid-template-areas: 'menu menu' 'mainContent mainContent';
+            grid-template-rows: 25px 10fr 10px;
+            grid-template-areas: 'header header' 'mainContent mainContent' 'footer footer';
         }
         .header {
-            grid-area: menu;
+            grid-area: header;
             background-color: gray;
             text-align: right;
         }
@@ -42,10 +43,7 @@
             text-align: left;
             display: inline-block;
         }
-        .header-container {
-            background-color: #555;
-            color: white;
-        }
+        .header-container {}
         .header-toggle {
             background-color: #333;
             overflow: hidden;
@@ -61,6 +59,10 @@
             font-size: 17px;
             display: block;
         }
+        .header-toggle a.menu-mainText {
+            color: white;
+            text-decoration: none;
+        }
         .header-toggle a.icon {
             background: black;
             display: block;
@@ -75,10 +77,6 @@
         .menu-mainText {
             text-align: right;
             text-transform: uppercase;
-        }
-        .active {
-            background-color: #333;
-            color: white;
         }
         @media only screen and (max-width: 1859px) {
             .page {
@@ -98,101 +96,24 @@
         .mainContent {
             grid-area: mainContent;
         }
-        .gridGame {
-            display: grid;
-            grid-template-columns: 250px 250px 250px;
-            grid-template-rows: 250px 250px 250px;
-            padding: 30px;
-            grid-gap: 0px;
+        .footer {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            width: 100%;
+            height: 2rem;
+            background-color: lightgray;
+            grid-area: footer;
+            font-family: 'Courier New', Courier, monospace;
+            justify-content: center;
+            align-items: center;
         }
-        .linje0 {
-            background-image: url("https://ae01.alicdn.com/kf/HTB1wCQAafvsK1RjSspdq6AZepXa7/Unicorn-Light-Switch-Stickers-For-Kids-Rooms-Baby-Nursery-Home-Cartoon-Cute-Animal-Horse-Unicorn-Cup.jpg_q50.jpg");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje1 {
-            background-image: url("https://billig-billy.dk/cache/1180585/magnet-3d-med-enhjoerning-fit-1600x1600x100.jpg");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje2 {
-            background-image: url("https://extra-leker.freetls.fastly.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/t/nti-864728-d_1.jpg");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje4 {
-            background-image: url("https://cdn.shopify.com/s/files/1/1365/2497/products/Glow-Unicorn-Mask_2000x.png?v=1553633463");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje5 {
-            background-image: url("https://i.pinimg.com/236x/df/54/e7/df54e71bb986c34edb44d630b754201e--unicorn-hat-cute-unicorn.jpg");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje6 {
-            background-image: url("https://dslv9ilpbe7p1.cloudfront.net/X0lMEsJM-BiCzHXcssE61A_store_logo_image.png");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje7 {
-            background-image: url("https://images-na.ssl-images-amazon.com/images/I/819jYvIkK3L._AC_SL1500_.jpg");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje8 {
-            background-image: url("https://i.pinimg.com/originals/dc/9b/46/dc9b464aac04eaa5b37c0747fc3ca9ca.jpg");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje9 {
-            background-image: url("https://image.freepik.com/free-vector/cute-green-snake-cartoon_29190-4813.jpg");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .linje3 {
-            background-image: url("https://data.whicdn.com/images/116944062/original.png");
-            background-size: 250px;
-            border: 1px solid black;
-            padding: 20px;
-            font-size: 30px;
-            text-align: center;
+        @media only screen and (max-width: 958px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px 4fr 20px;
+                grid-template-areas: 'header' 'mainContent' 'footer';
+            }
         }
     </style>
 </head>
@@ -200,63 +121,68 @@
 <body onload="lagDiv()">
     
 
-<div class="page">
-    <div class="header">
-        <ul>
-            <li>
+    <div class="page">
+        <div class="header">
+            <ul>
+                <li>
+                    <a href="../pages/LiveShare.html">LiveShare 01</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare2.html">LiveShare 02</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare3.html">LiveShare 03</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare4.html">LiveShare 04</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare5.html">LiveShare 05</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare6.html">LiveShare 06</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare7.html">LiveShare 07</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare8.html">LiveShare 08</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare9.html">LiveShare 09</a>
+                </li>
+                <li>
+                    <a href="../pages/LiveShare10.html">LiveShare 10</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-container">
+        <div class="header-toggle">
+                <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            <a href="#" class="active menu-mainText">Menu</a>
+            <div id="menuLinks">
                 <a href="../pages/LiveShare.html">LiveShare 01</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare2.html">LiveShare 02</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare3.html">LiveShare 03</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare4.html">LiveShare 04</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare5.html">LiveShare 05</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare6.html">LiveShare 06</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare7.html">LiveShare 07</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare8.html">LiveShare 08</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare9.html">LiveShare 09</a>
-            </li>
-            <li>
                 <a href="../pages/LiveShare10.html">LiveShare 10</a>
-            </li>
-        </ul>
-    </div>
-    <div class="header-container">
-    <div class="header-toggle">
-            <a href="javascript:void(0);" class="icon" onclick="openMenu()">
-                <i class="fas fa-bars"></i>
-            </a>
-        <a href="#" class="active menu-mainText">Menu</a>
-        <div id="menuLinks">
-            <a href="../pages/LiveShare.html">LiveShare 01</a>
-            <a href="../pages/LiveShare2.html">LiveShare 02</a>
-            <a href="../pages/LiveShare3.html">LiveShare 03</a>
-            <a href="../pages/LiveShare4.html">LiveShare 04</a>
-            <a href="../pages/LiveShare5.html">LiveShare 05</a>
-            <a href="../pages/LiveShare6.html">LiveShare 06</a>
-            <a href="../pages/LiveShare7.html">LiveShare 07</a>
-            <a href="../pages/LiveShare8.html">LiveShare 08</a>
-            <a href="../pages/LiveShare9.html">LiveShare 09</a>
-            <a href="../pages/LiveShare10.html">LiveShare 10</a>
+            </div>
         </div>
     </div>
-</div>
     <div class="mainContent">
         <div id="page1" class="gridGame"></div>
+    </div>
+    <div class="footer">
+        <a href="#" class="footer-text">
+            Team 2
+        </a>
     </div>
 </div>
 

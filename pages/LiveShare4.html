@@ -15,11 +15,11 @@
             position: relative;
             display: grid;
             grid-template-columns: 200px 1fr;
-            grid-template-rows: 25px 10fr;
-            grid-template-areas: 'menu menu' 'mainContent mainContent';
+            grid-template-rows: 25px 10fr 10px;
+            grid-template-areas: 'header header' 'mainContent mainContent' 'footer footer';
         }
         .header {
-            grid-area: menu;
+            grid-area: header;
             background-color: gray;
             text-align: right;
         }
@@ -42,10 +42,7 @@
             text-align: left;
             display: inline-block;
         }
-        .header-container {
-            background-color: #555;
-            color: white;
-        }
+        .header-container {}
         .header-toggle {
             background-color: #333;
             overflow: hidden;
@@ -61,6 +58,10 @@
             font-size: 17px;
             display: block;
         }
+        .header-toggle a.menu-mainText {
+            color: white;
+            text-decoration: none;
+        }
         .header-toggle a.icon {
             background: black;
             display: block;
@@ -75,10 +76,6 @@
         .menu-mainText {
             text-align: right;
             text-transform: uppercase;
-        }
-        .active {
-            background-color: #333;
-            color: white;
         }
         @media only screen and (max-width: 1859px) {
             .page {
@@ -97,6 +94,25 @@
         }
         .mainContent {
             grid-area: mainContent;
+        }
+        .footer {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            width: 100%;
+            height: 2rem;
+            background-color: lightgray;
+            grid-area: footer;
+            font-family: 'Courier New', Courier, monospace;
+            justify-content: center;
+            align-items: center;
+        }
+        @media only screen and (max-width: 958px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px 4fr 20px;
+                grid-template-areas: 'header' 'mainContent' 'footer';
+            }
         }
         #fir1 {
             background-color: lightgray;
@@ -132,60 +148,60 @@
 
 <body onload="sjekkHealth(), showStat()">
 <div class="page">
-        <div class="header">
-            <ul>
-                <li>
-                    <a href="../pages/LiveShare.html">LiveShare 01</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare2.html">LiveShare 02</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare3.html">LiveShare 03</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare4.html">LiveShare 04</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare5.html">LiveShare 05</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare6.html">LiveShare 06</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare7.html">LiveShare 07</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare8.html">LiveShare 08</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare9.html">LiveShare 09</a>
-                </li>
-                <li>
-                    <a href="../pages/LiveShare10.html">LiveShare 10</a>
-                </li>
-            </ul>
-        </div>
-        <div class="header-container">
-        <div class="header-toggle">
-                <a href="javascript:void(0);" class="icon" onclick="openMenu()">
-                    <i class="fas fa-bars"></i>
-                </a>
-            <a href="#" class="active menu-mainText">Menu</a>
-            <div id="menuLinks">
+    <div class="header">
+        <ul>
+            <li>
                 <a href="../pages/LiveShare.html">LiveShare 01</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare2.html">LiveShare 02</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare3.html">LiveShare 03</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare4.html">LiveShare 04</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare5.html">LiveShare 05</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare6.html">LiveShare 06</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare7.html">LiveShare 07</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare8.html">LiveShare 08</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare9.html">LiveShare 09</a>
+            </li>
+            <li>
                 <a href="../pages/LiveShare10.html">LiveShare 10</a>
-            </div>
+            </li>
+        </ul>
+    </div>
+    <div class="header-container">
+    <div class="header-toggle">
+            <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        <a href="#" class="active menu-mainText">Menu</a>
+        <div id="menuLinks">
+            <a href="../pages/LiveShare.html">LiveShare 01</a>
+            <a href="../pages/LiveShare2.html">LiveShare 02</a>
+            <a href="../pages/LiveShare3.html">LiveShare 03</a>
+            <a href="../pages/LiveShare4.html">LiveShare 04</a>
+            <a href="../pages/LiveShare5.html">LiveShare 05</a>
+            <a href="../pages/LiveShare6.html">LiveShare 06</a>
+            <a href="../pages/LiveShare7.html">LiveShare 07</a>
+            <a href="../pages/LiveShare8.html">LiveShare 08</a>
+            <a href="../pages/LiveShare9.html">LiveShare 09</a>
+            <a href="../pages/LiveShare10.html">LiveShare 10</a>
         </div>
     </div>
+</div>
     <div class="mainContent">
 
             <div id="fir1"></div>
