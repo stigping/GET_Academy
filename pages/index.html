@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <script>
+        //M
+        var nameInput = null;
+        var myName = null;
+
+        //V
+        updateView();
+        function updateView() {
+            var txt = '';
+            if (myName) {
+                txt = `Hei, ${myName}!`;
+            }
+
+            document.getElementById('app').innerHTML = `
+            Navn: <br/>
+            <input type="text" value"${nameInput || ''}" oninput="nameInput=this.value" /> <br/>
+            <button onclick="registerName()">Registrer navnet mitt</button>
+            ${txt}
+            `;
+        }
+        //C
+        function registerName() {
+            myName = nameInput;
+            updateView();
+        }
+
+        //registerName() {
+        //    var name = document.getElementById('nameInput').value;
+        //    document.getElementById('name').innerHTML = `Hei, ${name}!`;
+        //}
+    </script>
+</body>
+
+</html>

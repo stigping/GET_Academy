@@ -99,6 +99,12 @@ div.codelock button {
     margin-left: 10px;
     margin-top: 10px;
 }
+#confirmButton {
+    width: 75px;
+    height: 50px;
+    padding-bottom: 150px;
+    padding-top: 150px;
+}
 div.clickergame {
     font-size: 500%;
     user-select: none;

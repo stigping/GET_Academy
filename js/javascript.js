@@ -49,29 +49,23 @@ function doChange(tableo) {
 *
 */
 // Codelock START
-var cln01 = 0;
-var clt01 = "clt01 ";
-var cln02 = 1;
-var clt02 = "clt02 ";
 
-function clinput(onClick) {
-  console.log(onClick.innerText);
-  cln01++;
-  cln02++;
-  clt01 += "1";
-  clt02 += "2";
+let enteredSoFar = '';
+let correctCode = 3812;
 
-  document.getElementById("clninput").innerHTML += " " + onClick.innerText;
+function clinput(clInput) {
+    document.getElementById('codeInput').innerText += clInput.innerText;
+    enteredSoFar += clInput.innerText;
+
 }
 
-var correctcode = "3812";
-var results = "";
-
-function codelock() {
-  if (cln01 == correctcode) {
-    results = correctcode;
-  } else {
-  }
+function openLock() {
+    if (enteredSoFar == correctCode) {
+        document.getElementById('alert').innerText = 'Access Granted!';
+    }
+    else if (enteredSoFar != correctCode) {
+        document.getElementById('alert').innerText = 'Access Denied!';
+    }
 }
 // Codelock END
 /*
