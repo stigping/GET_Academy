@@ -1,0 +1,25 @@
+.pgrid {
+    display: grid;
+    grid-template-columns: 343px 343px 343px;
+    grid-template-rows: 193px 193px 193px;
+    padding: 20px;
+    justify-content: center;
+    
+}
+.puzzle1 {
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    border: 1px solid black;
+}
+.mainContent img {}
+.pieces {
+    padding: 20px;
+    width: 150px;
+    height: auto;
+    float: left;
+}
+.pieces img {
+    width: 100%;
+    height: 100%;
+}

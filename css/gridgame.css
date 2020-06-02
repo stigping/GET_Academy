@@ -3,8 +3,7 @@
             display: grid;
             grid-template-columns: 250px 250px 250px;
             grid-template-rows: 250px 250px 250px;
-            padding: 30px;
-            grid-gap: 0px;
+            padding: 20px;
         }
         .linje0 {
             background-image: url("https://ae01.alicdn.com/kf/HTB1wCQAafvsK1RjSspdq6AZepXa7/Unicorn-Light-Switch-Stickers-For-Kids-Rooms-Baby-Nursery-Home-Cartoon-Cute-Animal-Horse-Unicorn-Cup.jpg_q50.jpg");

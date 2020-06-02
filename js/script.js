@@ -14,8 +14,6 @@ let year = null;
 //C
 function isDateValid(date) {
     fullDate = date;
-    dotIndex1 = date.indexOf('.');
-    dotIndex2 =
     year = date.substr(6);
 
     checkLength()
