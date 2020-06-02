@@ -1,3 +1,4 @@
-QUnit.test( "hello test", function( assert ) {
-    assert.ok( 1 == "1", "Passed!" );
+QUnit.test( "Valid length", function( assert ) {
+    const isValid = isDateValid('17.01.2020');
+    assert.equal(isValid, 'true');
   });
