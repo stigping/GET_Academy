@@ -2,53 +2,98 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>STIG - TnL</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 
 <body>
-
-<div class="page">
-
-    <div class="header">
-
-        <nav class="main-nav">
-            <div class="full">
-                <!-- Logo ( * your text or image into link tag *) -->
-                <div class="nav-logo">
-                    <a href="#" class="logo">
-                        <img src="../img/WebLogo.png" alt="">
-                    </a>
+    <div class="page">
+        <div class="header">
+            <nav class="main-nav">
+                <div class="full">
+                    <!-- Logo ( * your text or image into link tag *) -->
+                    <div class="nav-logo">
+                        <a href="#" class="logo">
+                            <img src="../img/WebLogo.png" alt="" />
+                        </a>
+                    </div>
+                    <!-- Main Menu -->
+                    <div class="inner-nav">
+                        <ul style="max-height: 884px;">
+                            <li>
+                                <a href="../index.html" style="height: 75px; line-height: 75px;">Index</a>
+                            </li>
+                            <li>
+                                <a href="../pages/codelock.html" style="height: 75px; line-height: 75px;">Codelock</a>
+                            </li>
+                            <li>
+                                <a href="../pages/snowman.html" style="height: 75px; line-height: 75px;">Snowman</a>
+                            </li>
+                            <li>
+                                <a href="../pages/quiz.html" style="height: 75px; line-height: 75px;">Quiz</a>
+                            </li>
+                            <li>
+                                <a href="../pages/onmouseover.html"
+                                    style="height: 75px; line-height: 75px;">onmouseover</a>
+                            </li>
+                            <li>
+                                <a href="../pages/onload.html" style="height: 75px; line-height: 75px;">onload</a>
+                            </li>
+                            <li>
+                                <a href="../pages/time.html" style="height: 75px; line-height: 75px;">time</a>
+                            </li>
+                            <li class="active">
+                                <a href="../pages/clickergame.html"
+                                    style="height: 75px; line-height: 75px;">Clickergame</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Main Menu -->
-                <div class="inner-nav">
-                    <ul style="max-height: 884px;">
-                        <li><a href="../index.html" style="height: 75px; line-height: 75px;">Index</a></li>
-                        <li><a href="../pages/codelock.html" style="height: 75px; line-height: 75px;">Codelock</a></li>
-                        <li><a href="../pages/snowman.html" style="height: 75px; line-height: 75px;">Snowman</a></li>
-                        <li><a href="../pages/quiz.html" style="height: 75px; line-height: 75px;">Quiz</a></li>
-                        <li><a href="../pages/onmouseover.html" style="height: 75px; line-height: 75px;">onmouseover</a></li>
-                        <li><a href="../pages/onload.html" style="height: 75px; line-height: 75px;">onload</a></li>
-                        <li><a href="../pages/time.html" style="height: 75px; line-height: 75px;">time</a></li>
-                        <li class="active"><a href="../pages/clickergame.html" style="height: 75px; line-height: 75px;">Clickergame</a></li>
+            </nav>
+        </div>
+
+        <div class="mainContent">
+            <div class="tnl1">
+                <h3>Loops and Arrays</h3>
+                <ul>
+                    <li>Loops</li>
+                    <ul>
+                        <li>
+                            <tt>while</tt>
+                            <tt>for</tt>
+                        </li>
                     </ul>
-                </div>
+                    <li>Arrays</li>
+                </ul>
             </div>
-        </nav>
-    </div>
+            <hr />
+<script type="text/javascript">
 
-<div class="mainContent">
-    
-</div>
-<br/>
-<div class="footer">
-    <a href="#" class="footer-text">
-        © Stig Omdal 2020.
-    </a>
-</div>
-<br/>
-</div>
-<script type="text/javascript" src="../js/javascript.js"></script>
-</body>
+    var names = ['Stig', 'Adrian', 'Ping', 'Daehyun'];
+
+    for (var i = 0; i < names.length; i++) {
+        if(names[i]!=null) {
+            document.write("Hei " + names[i] + "<br/>");
+        }
+    }
+
+	// var i = 1;
+	// while (i <= 9) {
+	// document.write('Stig ');
+	// i++;
+	// }
+</script>
+        </div>
+        <br />
+        <div class="footer">
+            <a href="#" class="footer-text">
+                © Stig Omdal 2020.
+            </a>
+        </div>
+        <br />
+    </div>
+    <script type="text/javascript" src="../js/javascript.js"></script>
+    <script type="text/javascript" src="../js/tnl.js"></script>
+
 </html>

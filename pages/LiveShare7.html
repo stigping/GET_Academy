@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 2 - LS7</title>
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/qunit/qunit-2.10.0.css">
     <script src="https://kit.fontawesome.com/1e3bbfe500.js" crossorigin="anonymous"></script>
     <style>
         body {
@@ -41,6 +42,12 @@
                 grid-template-areas: 'header' 'mainContent' 'footer';
             }
         }
+        .ssp {}
+        .ssp img {
+            width: 250px;
+            height: auto;
+        }
+        .mcDiv {}
     </style>
 </head>
 
@@ -101,10 +108,18 @@
             </div>
         </div>
     </div>
-    <div class="mainContent">
-
+    <div class="mainContent mcDiv">
         
-
+        <div id="game"></div>
+        <br/>
+        <hr>
+        <br/>
+        <div id="results"></div>
+        <br/>
+        <hr>
+        <br/>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
     </div>
     <div class="footer">
         <a href="#" class="footer-text">
@@ -113,20 +128,10 @@
     </div>
 </div>
 
-<script>
-
-    function openMenu() {
-        var x = document.getElementById("menuLinks");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
-    }
-
-
-</script>
-
+<script src="../js/ssp.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/qunit-2.10.0.js"></script>
+<script src="../js/testssp.js"></script>
 </body>
 
 </html>
