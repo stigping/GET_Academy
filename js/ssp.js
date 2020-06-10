@@ -3,7 +3,6 @@ let resultsDiv = document.getElementById('results');
 
 //model
 let choice = ['rock', 'paper', 'scissors'];
-let ranNum = null;
 let playerChoice = '';
 let cpuChoice = '';
 let winner = 'Who will win?';
@@ -30,20 +29,21 @@ function choose(t1) {
 }
 
 function cpuChoose() {
-    randomNum()
+    let ranNum = randomNum();
     if (ranNum == 0) {
-        cpuChoice = choice[0]
+        return choice[0]
     }
     if (ranNum == 1) {
-        cpuChoice = choice[1]
+        return choice[1]
     }
     if (ranNum == 2) {
-        cpuChoice = choice[2]
+        return choice[2]
     }
     console.log(cpuChoice)
 }
 
 function checkResults() {
+    cpuChoice = cpuChoose();
     if (playerChoice === 'rock') {
         if (cpuChoice === 'scissors') {
             return winner = 'Winner Winner, Chicken Dinner!';
@@ -80,7 +80,7 @@ function checkResults() {
 }
 
 function randomNum(){
-    ranNum = Math.floor(Math.random() * 3);
+    return Math.floor(Math.random() * 3);
 }
 
 
