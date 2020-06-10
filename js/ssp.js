@@ -3,8 +3,8 @@ let resultsDiv = document.getElementById('results');
 
 //model
 let choice = ['rock', 'paper', 'scissors'];
-let playerChoice = '';
-let cpuChoice = '';
+let playerChoice = 'nothing';
+let cpuChoice = 'nothing';
 let winner = 'Who will win?';
 
 

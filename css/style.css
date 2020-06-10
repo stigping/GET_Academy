@@ -68,6 +68,7 @@ div.menu {
 }
 div.mainContent {
     grid-area: mainContent;
+    padding-bottom: 2rem;
 }
 div.footer {
     position: absolute;
