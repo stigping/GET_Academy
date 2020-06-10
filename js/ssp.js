@@ -5,7 +5,7 @@ let resultsDiv = document.getElementById('results');
 let choice = ['rock', 'paper', 'scissors'];
 let playerChoice = 'nothing';
 let cpuChoice = 'nothing';
-
+let winner = 'Who will win?';
 
 
 //view
@@ -29,22 +29,10 @@ function choose(t1) {
 }
 
 function cpuChoose() {
-    let ranNum = randomNum();
-    if (ranNum == 0) {
-        return choice[0]
-    }
-    if (ranNum == 1) {
-        return choice[1]
-    }
-    if (ranNum == 2) {
-        return choice[2]
-    }
-    console.log(cpuChoice)
+    return cpuChoice = choice[randomNum()];
 }
 
 function checkResults() {
-    cpuChoice = cpuChoose();
-    let winner = 'Who will win?';
     if (playerChoice === 'rock') {
         if (cpuChoice === 'scissors') {
             winner = 'Winner Winner, Chicken Dinner!';
@@ -77,8 +65,8 @@ function checkResults() {
         } if (cpuChoice === 'scissors') {
             winner = 'Tie Game!';
         }
-        return winner;
     }
+    return winner;
 }
 
 function randomNum(){

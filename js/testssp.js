@@ -28,12 +28,6 @@ assert.equal((veldigSant < 3 && veldigSant > -1), true);
 });
 
 QUnit.test( "Resultata blir riktig", function( assert ) {
-  
+      
 assert.equal(test, true);
-});
-
-QUnit.test( "Sjekker for en vinner.", function( assert ) {
-  let dette = winner.length;
-  let datta  41
-assert.equal(dette, datta);
 });
