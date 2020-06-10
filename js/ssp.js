@@ -5,7 +5,7 @@ let resultsDiv = document.getElementById('results');
 let choice = ['rock', 'paper', 'scissors'];
 let playerChoice = 'nothing';
 let cpuChoice = 'nothing';
-let winner = 'Who will win?';
+
 
 
 //view
@@ -44,15 +44,16 @@ function cpuChoose() {
 
 function checkResults() {
     cpuChoice = cpuChoose();
+    let winner = 'Who will win?';
     if (playerChoice === 'rock') {
         if (cpuChoice === 'scissors') {
-            return winner = 'Winner Winner, Chicken Dinner!';
+            winner = 'Winner Winner, Chicken Dinner!';
         } else {
             if (cpuChoice === 'paper') {
-                return winner = 'That CPU strong af...';
+                winner = 'That CPU strong af...';
             }
         } if (cpuChoice === 'rock') {
-            return winner = 'Tie Game!';
+            winner = 'Tie Game!';
         }
     }
     if (playerChoice === 'paper') {
@@ -63,7 +64,7 @@ function checkResults() {
                 return winner = 'That CPU strong af...';
             }
         } if (cpuChoice === 'paper') {
-            return winner = 'Tie Game!';
+            winner = 'Tie Game!';
         }
     }
     if (playerChoice === 'scissors') {
@@ -71,11 +72,12 @@ function checkResults() {
             return winner = 'Winner Winner, Chicken Dinner!';
         } else {
             if (cpuChoice === 'rock') {
-                return winner = 'That CPU strong af...';
+                winner = 'That CPU strong af...';
             }
         } if (cpuChoice === 'scissors') {
-            return winner = 'Tie Game!';
+            winner = 'Tie Game!';
         }
+        return winner;
     }
 }
 
