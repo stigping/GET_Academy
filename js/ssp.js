@@ -17,7 +17,7 @@ function showGame() {
     <img id="paper" src="../img/paper.png" alt="" onclick="choose(choice[1])">
     <img id="scissors" src="../img/scissors.png" alt="" onclick="choose(choice[2])">
     </div>`;
-    resultsDiv.innerHTML = `<div>Player has chosen ${playerChoice} and CPU has chosen ${cpuChoice}. <br/> ${winner}</div>`
+    resultsDiv.innerHTML = `<div class="results">Player has chosen ${playerChoice} and CPU has chosen ${cpuChoice}. <br/> ${winner}</div>`
 }
 
 //controller
