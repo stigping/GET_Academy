@@ -1,0 +1,22 @@
+p.feilmelding {
+    color: red;
+}
+
+.trekkteller {
+    clear: left;
+}
+
+.flis {
+    color: blue;
+    background: lightblue;
+    padding: 18px;
+    margin: 10px;
+    border: solid green 7px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+.førstPåLinje {
+    clear: left;
+}
