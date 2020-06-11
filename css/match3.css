@@ -1,0 +1,27 @@
+.match3 {
+	user-select: none;
+}
+
+.match3.cell {
+	background-color: lightgray;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 2px;
+	font-size: 500%;
+	font-family: helvetica;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.match3.first {
+	clear: left;
+}
+
+.match3.coloro {
+	color: blue;
+}
+
+.match3.colorx {
+	color: green;
+}
