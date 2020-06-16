@@ -5,7 +5,7 @@ let input = document.getElementById('inputs');
 //View
 function show() {
     contentDiv.innerHTML = `
-    <input id='inputs' onchange="makeText(inputs.value)">
+    <input id='inputs' onchange="makeText(this.value)">
     <div id="answer">${answer}</div>
     `;
     //answer.innerText += translate(makeText);
