@@ -6,7 +6,7 @@ let input = document.getElementById('inputs');
 function show() {
     contentDiv.innerHTML = `
     <input id='inputs'>
-    <input id='myBtn' type="button" onclick="makeText(input.value)" value="Clickme">
+    <input id='myBtn' type="button" onclick="makeText(inputs.value)" value="Clickme">
     <div id="answer">${answer}</div>
     `;
     //answer.innerText += translate(makeText);
