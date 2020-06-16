@@ -1,4 +1,4 @@
-let answer = null;
+let answer;
 
 inputText = '';
 const morseCodeJSON = {'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.', 'g':'--.', 'h':'....',

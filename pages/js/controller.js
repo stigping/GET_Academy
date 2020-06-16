@@ -1,13 +1,13 @@
 function translate(text) {
-    document.getElementById("answer").click();
+    let tilbakeStuff = morseCodeJSON[text];
+    return tilbakeStuff.value;
 }
 
 function makeText(tekst) {
     console.log('I funksjon: ', inputText, inputText.length);
     for (let i = 0; i < tekst.length; i++) {
     inputText = tekst[i];
-    show();
-    return translate(inputText);
+    translate(inputText);
  }
 }
 /*
