@@ -1,6 +1,6 @@
 //function translate(text) {
-function makeText() {
-    console.log('I funksjon: ', document.getElementById('inputs'));
+function makeText(inputText) {
+    console.log('I funksjon: ', inputText);
     show();
  }
 /*function makeText(tekst) {
