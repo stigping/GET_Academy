@@ -6,11 +6,15 @@ let input = document.getElementById('inputs');
 function show() {
     contentDiv.innerHTML = `
     <input id='inputs' oninput="makeText(this.value)">
+    <button id='myBtn' onclick="refresh()">
     <div id="answer">${answer}</div>
     `;
     //answer.innerText += translate(makeText);
 
     
+}
+function refresh() {
+    answer = '';
 }
 
 
